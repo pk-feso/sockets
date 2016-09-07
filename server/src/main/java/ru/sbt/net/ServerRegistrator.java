@@ -1,7 +1,11 @@
 package ru.sbt.net;
 
+import java.lang.reflect.Method;
+
 public class ServerRegistrator {
     public static void listen(String host, int port, Object impl) {
+        String methodName = null;
+        Object[] args = null;
 
     }
 

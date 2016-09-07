@@ -21,8 +21,6 @@ public class NetClientFactory {
 
     public static void main(String[] args) {
         NetClientFactory factory = new NetClientFactory("localhost", 5000);
-
-
         Calculator client = factory.createClient(Calculator.class);
         double calculate = client.calculate(1, 2);
     }
