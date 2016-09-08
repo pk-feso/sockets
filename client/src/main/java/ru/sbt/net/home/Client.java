@@ -13,15 +13,12 @@ public class Client {
         final Calculator calculator = new NetClientFactory("localhost", 5000).createClient(Calculator.class);
         for (int i = 0; i < 2000; i++) {
             executorService.submit(() -> {
-                System.out.println(calculator.calculate((int) (Math.random() * 20), (int) (Math.random() * 100)));
+                System.out.println(calculator.calculate(20, 100));
             });
         }
         executorService.shutdown();
 
     }
-
-
-
 
 
 }

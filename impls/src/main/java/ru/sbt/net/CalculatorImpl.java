@@ -2,7 +2,7 @@ package ru.sbt.net;
 
 public class CalculatorImpl implements Calculator {
     public double calculate(int a, int b) {
-        return a + b + 204;
+        return a + b;
     }
 
     public double multiply(int a, int b) {
