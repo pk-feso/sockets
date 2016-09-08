@@ -1,6 +1,6 @@
-package ru.sbt.net;
+package ru.sbt.net.home;
 
-import java.io.DataOutputStream;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

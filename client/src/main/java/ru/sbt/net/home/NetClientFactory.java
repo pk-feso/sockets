@@ -1,7 +1,6 @@
-package ru.sbt.net;
+package ru.sbt.net.home;
 
-import java.lang.reflect.Proxy;
-import java.util.List;
+import ru.sbt.net.Calculator;
 
 import static java.lang.ClassLoader.getSystemClassLoader;
 import static java.lang.reflect.Proxy.newProxyInstance;
