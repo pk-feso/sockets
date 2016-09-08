@@ -8,11 +8,10 @@ import java.net.Socket;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        try(Socket client = new Socket("127.0.0.1", 7500)) {
-            byte[] b = new byte[1024];
-            int count = client.getInputStream().read(b);
-            System.out.println(new String(b, 0, count));
+        while (true) {
+            Calculator calculator = new NetClientFactory("localhost", 5000).createClient(Calculator.class);
+            System.out.println(calculator.calculate(10, 577));
+            System.out.println(calculator.multiply(30, 34));
         }
-
     }
 }
