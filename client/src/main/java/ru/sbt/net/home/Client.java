@@ -10,9 +10,10 @@ public class Client {
     static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        final Calculator calculator = new NetClientFactory("localhost", 5000).createClient(Calculator.class);
+
         for (int i = 0; i < 2000; i++) {
             executorService.submit(() -> {
+                Calculator calculator = new NetClientFactory("localhost", 5000).createClient(Calculator.class);
                 System.out.println(calculator.calculate(20, 100));
             });
         }
